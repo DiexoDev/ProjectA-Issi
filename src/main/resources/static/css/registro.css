@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", "Sans-serif";
+}
+/*Barra de navegacion*/
+.logo img{
+    cursor: pointer;
+    width: 70px;
+    border-radius: 100px;
+    box-shadow: -4px 4px 4px #b189a7;
+    margin: 10px  5px  5px 20px;
+}
+nav{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #3C91E6;
+}
+.nav-links a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0px 15px;
+}
+.nav-links a:hover{
+    color: #3FA7D6;
+}
+.nav-logins{
+    display: flex;
+}
+.nav-logins a{
+    justify-content: space-between;
+    margin: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(219, 218, 218, 0.63);
+    color: #000;
+}
+.nav-logins a:hover{
+    color: white;
+    background-color: #A3C3D9;
+}
+#registrar{
+    background-color: rgb(78, 76, 76);
+    color: #fff;
+}
+#registrar:hover{
+    background-color: #CCD6EB;
+    color: #000;
+}
+.fondo.imagen{
+    background: url(/images/imagen.jpg) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 1200px;
+}
+.blur {
+    position: absolute;
+    width: 100%;
+    height: 1200px;
+    background-color: rgba(0, 0, 0, .7);
+}
+/*Carta registro*/
+.card{/*Centrar la carta*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+form{
+    background-color: #24253c9f;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    width: 420px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.575);
+    text-align: center;
+}
+form h2{
+    font-size: 30px;
+    color: #EDF0F0;
+    margin-bottom: 35px;
+}
+input{
+    padding: 17px;
+    background-color: transparent;
+    border: none;;
+    border-bottom: 2px solid #3c91e669;
+    margin-bottom: 30px;
+    outline: none;
+    color: #FFFFFF;
+    font-size: 16px;
+} 
+::placeholder {
+    color: #89879B;
+}
+.btn {
+    background-color: #003049;
+    border: 2px solid #003049;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.btn:hover, .btn:focus{
+    background-color: #9FC2CC;
+    border: 2px solid #9FC2CC;
+}
+.consulta p{
+    margin-top: 20px;
+    color: #ffffffb2;
+    font-size: 1.2rem;
+}
+.consulta a {
+    color: #6ca7ff;;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+.consulta a:hover{
+    color: #226CE0;
+}
+@media(max-width:991px) {
+    html, body{
+        height:100%;
+        margin:0;
+        display: flex;
+        flex-direction: column;
+    }
+    .nav, .nav-logins, .nav-links {
+        padding: 30px;
+    }
+    .blur{
+        position: absolute;
+        
+    }
+    form {
+        width: 250px;
+    }
+}
