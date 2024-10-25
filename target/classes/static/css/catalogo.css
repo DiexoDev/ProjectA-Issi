@@ -1,0 +1,141 @@
+body {
+    background-color: #f7f7f7;
+}
+
+h1 {
+    color: white;
+}
+
+.card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    color: #007bff;
+}
+
+.card-text strong {
+    color: #28a745;
+}
+body {
+    margin: 0;
+    padding: 0;
+
+}
+main{
+    background-image: url('/images/fondo_catalogo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+
+}
+/*Barra de navegacion*/
+.logo img{
+    cursor: pointer;
+    width: 70px;
+    border-radius: 100px;
+    box-shadow: -4px 4px 4px #b189a7;
+    margin: 10px  5px  5px 20px;
+}
+nav{
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #3C91E6;
+    background-color: white;
+}
+.nav-links a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: 0px 15px;
+}
+.nav-links a:hover{
+    color: #3FA7D6;
+}
+.nav-logins{
+    display: flex;
+}
+.nav-logins a{
+    justify-content: space-between;
+    margin: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(219, 218, 218, 0.63);
+    color: #000;
+}
+.nav-logins a:hover{
+    color: white;
+    background-color: #A3C3D9;
+}
+#registrar{
+    background-color: rgb(78, 76, 76);
+    color: #fff;
+}
+#registrar:hover{
+    background-color: #CCD6EB;
+    color: #000;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh !important;
+}
+.header{
+    background: url(/images/imagen_oscura.jpg) no-repeat center;
+    background-size: cover;
+}
+.container {
+    max-width: 900px;
+    margin: 20px auto; 
+    padding: 40px;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+}
+h1 {
+    text-align: center;
+    color: white;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #218838;
+}
+@media screen and (min-width: 768px) {
+    main{
+        background-position: center -35vh;
+    }
+}

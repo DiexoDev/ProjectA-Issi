@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Issi</title>
   <link rel="stylesheet" th:href="@{/css/registro.css}">
-  <link rel="icon" th:href="@{/images/logo.ico}">
+  <link rel="icon" href="/images/logo.jpg"/>
 </head>
 <body>
 <header>
   <nav>
     <div class="logo">
-      <img th:src=@{/images/logo.ico} alt="Logo">
+      <img src="/images/logo.jpg" alt="Logo"/>
     </div>
     <div class="nav-links">
       <a href="#">Acerca De</a>
@@ -31,16 +31,18 @@
   <div class="blur">
     <main>
       <div class="card">
-        <form method="GET">
+        <form action="" method="POST" th:object="${usuario}" >
           <h2>LOGIN</h2>
+          <input type="email" placeholder="Correo" th:field="*{email}">
+          <input type="password" placeholder="Contraseña" th:field="*{contrasena}">
 
-          <input type="email" placeholder="Correo">
-          <input type="password" placeholder="Contraseña">
-
+          <!-- Mostrar error si las credenciales son incorrectas -->
+          <p th:if="${error}" th:text="${error}" style="color:red;"></p>
 
           <input type="submit" class="btn" value="Ingresar">
           <div class="consulta">
             <p>¿No tienes una cuenta?</p>
+            <p><a href="/" id="admin-login">Ingresar como administrador</a></p>
             <br/>
             <a th:href="@{/api/registro}" target="_blank">Crear Cuenta</a>
           </div>
@@ -49,5 +51,18 @@
     </main>
   </div>
 </div>
+</div>
+<script>
+  document.getElementById('admin-login').addEventListener('click', function(event) {
+    event.preventDefault();
+    var code = prompt('Ingrese el código de administrador:');
+    if (code === 'admin') {
+      window.location.href = '/admin';
+    } else {
+      alert('Código incorrecto');
+    }
+  });
+</script>
+</body>
 </body>
 </html>

@@ -8,22 +8,22 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ProductoServiceImpl implements ProductoService{
+public class ProductoServiceImpl implements ProductoService {
     @Autowired
     ProductoRepository repository;
 
     @Override
-    public List<Producto> listarTodosLosProductos() {
+    public List<Producto> obtenerProductos() {
         return repository.findAll();
     }
 
     @Override
-    public Producto guardarProducto(Producto producto) {
+    public Producto guardarUsuario(Producto producto) {
         return repository.save(producto);
     }
 
     @Override
-    public Producto actualizarProducto(Producto producto) {
+    public Producto actualizarUsuario(Producto producto) {
         return repository.save(producto);
     }
 
@@ -33,7 +33,7 @@ public class ProductoServiceImpl implements ProductoService{
     }
 
     @Override
-    public void eliminarProducto(Long id) {
+    public void eliminarUsuario(Long id) {
         repository.deleteById(id);
     }
 }

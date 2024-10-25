@@ -6,9 +6,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
-public class UsuarioServiceImpl implements UsuarioService{
+public class UsuarioServiceImpl implements UsuarioService {
     @Autowired
     UsuarioRepository repository;
 
@@ -31,6 +32,25 @@ public class UsuarioServiceImpl implements UsuarioService{
     public Usuario obtenerUsuarioPorId(Long id) {
         return repository.findById(id).get();
     }
+
+    @Override
+    public Optional<Usuario> encontrarPorEmail(String email) {
+        return Optional.empty();
+    }
+
+    /*@Override
+    public Optional<Usuario> encontrarPorEmail(String email) {
+        return repository.findByEmail(email);
+    }
+
+    public boolean verificarCredenciales(String email, String contrasena) {
+        Optional<Usuario> usuarioOptional = repository.findByEmail(email);
+        if (usuarioOptional.isPresent()){
+            Usuario usuario = usuarioOptional.get();
+            return usuario.getContrasena().equals(contrasena);
+        }
+        return false;
+    }*/
 
     @Override
     public void eliminarUsuario(Long id) {

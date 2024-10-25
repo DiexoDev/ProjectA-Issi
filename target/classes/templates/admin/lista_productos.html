@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de productos || Issi.comm</title>
+    <link rel="icon" href="/images/logo.jpg"/>
+    <link rel="stylesheet" href="/css/admin/lista_productos.css">
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><img src="/images/logo.jpg" alt="Logo"></li>
+            <li><a href="">Inicio</a></li>
+            <li><a href="/admin/producto/nuevo">Agregar Producto</a></li>
+            <div class="btn-salir">
+                <li><a href="/api/index">Salir</a></li>
+            </div>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    <h1>Tabla CRUD</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Talla</th>
+            <th>Precio</th>
+            <th>Categoría</th>
+            <th>Opciones</th>
+        </tr>
+        </thead>
+        <tbody id="table-body">
+        <tr th:each="producto : ${productos}" th:object="${producto}">
+            <td th:text="${producto.id}"></td>
+            <td th:text="${producto.nombre}"></td>
+            <td th:text="${producto.talla}"></td>
+            <td th:text="${producto.precio}"></td>
+            <td th:text="${producto.categoria}"></td>
+            <td>
+                <button class="edit">Editar</button>
+                <button class="delete">Eliminar</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <a href="form.html" target="_blank">
+        <button id="link-button">Ir a formulario</button>
+    </a>
+</div>
+</body>
+</html>
