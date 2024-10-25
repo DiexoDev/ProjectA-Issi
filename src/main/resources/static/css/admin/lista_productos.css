@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: url("/images/background_listaProductos.jpg") repeat-y;
+    background-size: cover;
+}
+nav{
+    max-width: 900px;
+    height: 3rem;
+    padding: 10px;
+    margin: auto;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 10px;
+    margin-bottom: 50px;
+}
+nav > ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+nav img{
+    width: 4rem;
+    border-radius: 2rem;
+    margin-top: -20px;
+    margin-left: -50px;
+}
+nav a{
+    text-decoration: none;
+    color: #333;
+    padding: 50px;
+    margin-left: 80px;
+}
+nav a:hover{
+    color: #000000;
+    text-shadow: black 0.3px 0.3px 0.3px;
+}
+.container {
+    max-width: 800px; /* Ancho máximo del contenedor */
+    margin: auto; /* Centramos el contenedor */
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form, table {
+    width: 100%; /* Ancho completo para el formulario y tabla */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50; /* Verde para agregar */
+}
+
+button:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+}
+
+table {
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.edit {
+    background-color: #4CAF50; /* Verde */
+    border-radius: 3rem;
+    color: white;
+}
+
+.edit:hover {
+    background-color: #45a049;
+}
+
+.delete {
+    background-color: #f44336; /* Rojo */
+    border-radius: 3rem;
+}
+@media  (min-width: 368px) and (max-width: 1400px) {
+    nav a{
+        padding: 10px;
+    }
+
+}

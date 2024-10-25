@@ -114,6 +114,7 @@ input{
     margin-top: 20px;
     color: #ffffffb2;
     font-size: 1.2rem;
+    cursor: pointer;
 }
 .consulta a {
     color: #6ca7ff;;
@@ -123,6 +124,7 @@ input{
 .consulta a:hover{
     color: #226CE0;
 }
+
 @media(max-width:991px) {
     html, body{
         height:100%;

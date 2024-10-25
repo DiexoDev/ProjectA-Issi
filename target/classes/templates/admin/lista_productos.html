@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de productos || Issi.comm</title>
+    <link rel="icon" href="/images/logo.jpg"/>
+    <link rel="stylesheet" href="/css/admin/lista_productos.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+    <link
+            href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css"
+            rel="stylesheet"/>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><img src="/images/logo.jpg" alt="Logo"></li>
+            <li><a href="">Inicio</a></li>
+            <li><a href="/admin/producto/nuevo">Agregar Producto</a></li>
+            <div class="btn-salir">
+                <li><a href="/api/index">Salir</a></li>
+            </div>
+        </ul>
+    </nav>
+</header>
+<div class="container">
+    <h1>Listado de productos</h1>
+    <table>
+        <thead>
+        <tr>
+            <th></th>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Talla</th>
+            <th>Precio</th>
+            <th>Categoría</th>
+            <th>Opciones</th>
+        </tr>
+        </thead>
+        <tbody id="table-body">
+        <tr th:each="producto : ${productos}" th:object="${producto}">
+            <td style="width: 150px; height: 100px;">
+                <a th:href="@{/assets/{filename}(filename=*{rutaImagen})}" data-fancybox>
+                    <img th:src="@{/assets/{filename}(filename=*{rutaImagen})}" alt="" class="img-thumbnail w-100 h-100"/>
+                </a>
+            </td>
+            <td th:text="${producto.id}"></td>
+            <td th:text="${producto.nombre}"></td>
+            <td th:text="${producto.talla}"></td>
+            <td th:text="${producto.precio}"></td>
+            <td th:text="${producto.categoria}"></td>
+            <td>
+                <button class="edit">Editar</button>
+                <button class="delete">Eliminar</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+</div>
+<script
+        src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+<script
+        src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script
+        src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+</html>

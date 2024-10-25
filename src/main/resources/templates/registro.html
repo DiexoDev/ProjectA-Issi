@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro Issi</title>
     <link rel="stylesheet" th:href="@{/css/registro.css}">
-    <link rel="icon" th:href="@{/images/logo.ico}">
+    <link rel="icon" href="/images/logo.jpg"/>
 </head>
 <body>
     <header>
         <nav>
             <div class="logo">
-                <img th:src=@{/images/logo.ico} alt="Logo">
+                <img src="/images/logo.jpg" alt="Logo"/>
             </div>
             <div class="nav-links">
                 <a href="#">Acerca De</a>
@@ -31,14 +31,14 @@
         <div class="blur">
             <main>
                 <div class="card">
-                    <form method="GET">
+                    <form action="" method="POST" th:object="${usuario}">
                         <h2>REGISTRO</h2>
-                        <input type="text" placeholder="Nombre" required>
+                        <input type="text" placeholder="Nombre" th:field="*{nombre}" required>
                         <input type="text" placeholder="Apellido" required>
-                        <input type="email" placeholder="Correo" required>
-                        <input type="date" name="fecha" id="fecha">
-                        <input type="tel" placeholder="Numero de telefono">
-                        <input type="password" placeholder="Contraseña" required>
+                        <input type="email" placeholder="Correo"   th:field="*{email}" required>
+                        <input type="date" th:field="*{fechaNacimiento}" id="fecha">
+                        <input type="tel" placeholder="Numero de telefono" th:field="*{telefono}">
+                        <input type="password" placeholder="Contraseña" th:field="*{contrasena}" required>
                         <input type="password" placeholder="Confirma contraseña" required>
 
                         <input type="submit" class="btn" value="Registrar">
