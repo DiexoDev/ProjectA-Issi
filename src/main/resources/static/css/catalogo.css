@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 body {
+    font-family: "Montserrat", serif !important;
     background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -16,11 +20,6 @@ h1 {
 
 .card-text strong {
     color: #28a745;
-}
-body {
-    margin: 0;
-    padding: 0;
-
 }
 main{
     background-image: url('/images/fondo_catalogo.jpg');
@@ -45,9 +44,11 @@ nav{
     max-width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     border-bottom: 2px solid #3C91E6;
     background-color: white;
+}
+nav .nav-links{
+    margin-left: 28%;
 }
 .nav-links a{
     font-size: 16px;
@@ -59,30 +60,6 @@ nav{
 }
 .nav-links a:hover{
     color: #3FA7D6;
-}
-.nav-logins{
-    display: flex;
-}
-.nav-logins a{
-    justify-content: space-between;
-    margin: 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    padding: 10px;
-    background-color: rgba(219, 218, 218, 0.63);
-    color: #000;
-}
-.nav-logins a:hover{
-    color: white;
-    background-color: #A3C3D9;
-}
-#registrar{
-    background-color: rgb(78, 76, 76);
-    color: #fff;
-}
-#registrar:hover{
-    background-color: #CCD6EB;
-    color: #000;
 }
 .header{
     display: flex;
@@ -105,9 +82,14 @@ nav{
     flex-direction: column; 
     align-items: center; 
 }
-h1 {
-    text-align: center;
-    color: white;
+
+.title {
+    margin-bottom: 40px;
+    font-size: 60px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-shadow: black 2px 2px 2px;
 }
 label {
     display: block;
@@ -134,8 +116,31 @@ button {
 button:hover {
     background-color: #218838;
 }
-@media screen and (min-width: 768px) {
+.texto-dinamico {
+    mix-blend-mode: difference;
+    color: white; /* Color base */
+}
+footer{
+    background-color: #171717;
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    position: relative;
+    bottom: 0;
+}
+footer h2{
+    padding: 10px;
+}
+footer p{
+    justify-content: space-evenly;
+    padding: 10px;
+}
+@media (min-width: 368px) and (max-width: 1400px)  {
     main{
         background-position: center -35vh;
+    }
+    nav .nav-links{
+        margin-left: 20%;
     }
 }

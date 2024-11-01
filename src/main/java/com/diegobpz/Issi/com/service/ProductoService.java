@@ -8,11 +8,11 @@ import java.util.Optional;
 public interface ProductoService {
     public List<Producto> obtenerProductos();
 
-    public Producto guardarUsuario(Producto producto);
+    public Producto guardarProducto(Producto producto);
 
-    public Producto actualizarUsuario(Producto producto);
+    public Producto actualizarProducto(Producto producto);
 
     public Producto obtenerProductoPorId(Long id);
 
-    public void eliminarUsuario(Long id);
+    public void eliminarProducto(Long id);
 }

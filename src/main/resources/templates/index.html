@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-  <head>
+<head>
     <title>Isii.comm</title>
     <link rel="icon" href="/images/logo.jpg"/>
-    <link rel="stylesheet" th:href="@{/css/main.css}" />
-  </head>
-  <body>
-    <header>
-      <nav>
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+</head>
+<body>
+<header>
+    <nav>
         <div class="logo">
-          <img src="/images/logo.jpg" alt="Logo"/>
+            <img src="/images/logo.jpg" alt="Logo"/>
         </div>
         <div class="nav-links">
-          <a href="#">Acerca De</a>
-          <a href="#">Ropa</a>
-          <a href="#">Accesorios</a>
-          <a href="#">Descuentos</a>
-          <a href="#">Pagos</a>
-          <a href="#">Contacto</a>
+            <a href="#acercade">Acerca De</a>
+            <a href="#productos">Ropa</a>
+            <a href="#productos">Accesorios</a>
+            <a href="#pagos">Descuentos</a>
+            <a href="#contacto">Contacto</a>
         </div>
         <div class="nav-logins">
-          <a th:href="@{/api/login}">Ingresar</a>
-          <a th:href="@{/api/registro}" id="registrar">Registrar</a>
+            <a th:href="@{/api/login}">Ingresar</a>
+            <a th:href="@{/api/registro}" id="registrar">Registrar</a>
         </div>
-      </nav>
-    </header>
+    </nav>
+</header>
 
-    <div class="content header">
-      <h2 class="title">Inicio</h2>
+<div class="content header">
+    <h2 class="title">Inicio</h2>
 
-    </div>
-    <section class="content sau">
-      <h2 class="title">Productos</h2>
-      <p>
+</div>
+<section class="content sau" id="productos">
+    <h2 class="title">Productos</h2>
+    <p>
         Nuestros productos son inspirados en los cantantes en tendencia, con un toque de elegancia y comodidad.
-      </p>
-      <br />
-      <div class="box-container">
+    </p>
+    <br/>
+    <div class="box-container">
         <div class="box">
-          <img src="/images/index/ropa1.jpg">
+            <img src="/images/index/ropa1.jpg">
         </div>
         <div class="box">
-          <img src="/images/index/ropa2.jpg">
+            <img src="/images/index/ropa2.jpg">
         </div>
         <div class="box">
             <img src="/images/index/ropa3.jpg">
@@ -49,45 +48,50 @@
         <div class="box">
             <img src="/images/index/ropa4.jpg">
         </div>
-      </div>
-    </section>
+    </div>
+</section>
 
-    <section class="content about">
-      <h2 class="title">nosotros</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-        quaerat consectetur fugiat sit et est ipsum nihil quod, provident eos
-        necessitatibus totam tenetur, harum saepe! Quod iste blanditiis qui
-        dignissimos!
-      </p>
+<section class="content about" id="acercade">
+    <h2 class="title">nosotros</h2>
+    <p>
+        En <strong>Issi.com</strong> , creemos que la moda es una forma de expresión única y personal. Nos especializamos en
+        ofrecer prendas de calidad que reflejen estilo, comodidad y tendencias actuales, para personas que buscan
+        destacar en cada momento. Desde nuestra fundación, nos hemos comprometido a cuidar cada detalle en nuestras
+        colecciones, seleccionando cuidadosamente materiales y diseños que encajen con el estilo de vida de nuestros
+        clientes. ¡Gracias por ser parte de nuestra comunidad y permitirnos inspirarte día a día!
+    </p>
 
-      <a href="#" class="btn">Saber mas</a>
-    </section>
+    <a href="#" class="btn">Saber mas</a>
+</section>
 
-    <section class="content price">
-      <article class="contain">
+<section class="content price" id="pagos">
+    <article class="contain">
         <h2 class="title">Precio</h2>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui ducimus
-          asperiores aut reprehenderit. Ipsam porro placeat ad dolor, tempore
-          officia suscipit maiores id illo omnis. Unde magni laudantium aliquid
-          necessitatibus!
+        <p class="texto-dinamico">
+            ¡La moda nunca se detiene y nuestros descuentos tampoco! En <strong>Issi.com</strong> ofrecemos rebajas
+            exclusivas para que renueves tu closet con las mejores prendas al mejor precio. Aprovecha nuestros
+            descuentos de temporada, ofertas especiales en tus artículos favoritos y promociones en colecciones
+            seleccionadas. Síguenos en redes sociales para estar al tanto de todas las
+            novedades y no perderte ninguna oportunidad de compra.
         </p>
         <a href="#" class="btn">Saber precio</a>
-      </article>
-    </section>
+    </article>
+</section>
 
-    <section class="content contact">
-      <h2 class="title">Contacto</h2>
-      <p>+57 301 3728811</p>
-      <figure>
+<section class="content contact" id="contacto">
+    <h2 class="title">Contacto</h2>
+    <p>¿Tienes alguna consulta, sugerencia o simplemente deseas comunicarte con nosotros? En <strong>Issi.com</strong>
+        estamos aquí para ayudarte. Nuestro equipo de atención al cliente está disponible para resolver tus dudas sobre
+        productos, pedidos, envíos y más. Puedes contactarnos a través de +57 301 3728811 o llenando el formulario en
+        nuestra web. ¡Estamos a un mensaje de distancia para brindarte la mejor experiencia de compra!</p>
+    <figure>
         <img
-          th:src="@{images/mapa.png}"
-          height="220px"
-          width="100%"
-          alt="Mapa"
+                src="images/mapa.png"
+                height="220px"
+                width="100%"
+                alt="Mapa"
         />
-      </figure>
-    </section>
-  </body>
+    </figure>
+</section>
+</body>
 </html>

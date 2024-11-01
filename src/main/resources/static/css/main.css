@@ -1,14 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 * {
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
     vertical-align: baseline;
 }
 
 body {
+    font-family: "Montserrat", serif;
     text-align: center;
-    font-family: sans-serif;
 }
 
 /*Barra de navegacion*/
@@ -172,6 +172,10 @@ p {
     padding-top: 20px;
     background: #171717;
     padding-bottom: 0;
+}
+.texto-dinamico {
+    mix-blend-mode: difference;
+    color: white; /* Color base */
 }
 
 @media only screen and (min-width: 360px) and (max-width: 1440px){

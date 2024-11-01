@@ -19,104 +19,41 @@
             <a href="#">Ropa</a>
             <a href="#">Accesorios</a>
             <a href="#">Descuentos</a>
-            <a href="#">Pagos</a>
             <a href="#">Contacto</a>
         </div>
-        <div class="nav-logins">
-            <a href="/api/login">Ingresar</a>
-            <a href="/api/registro" id="registrar">Registrar</a>
-        </div>
+
+
     </nav>
 </header>
 <main>
     <div class="container mt-5">
-        <h1 class="text-center mb-5">CATALOGO</h1>
+        <h1 class="text-center mb-5 texto-dinamico">CATALOGO</h1>
 
         <div class="row">
-            <div class="col-md-4">
-                <div class="card" th:each="productos :${productos}" th:object="${productos}">
-                    <img src="/images/imagen2.jpg" class="card-img-top">
+            <div class="col-md-3 my-5" th:each="producto :${productos}" th:object="${producto}">
+                <div class="card shadow-lg">
+                    <img th:src="@{/assets/{filename}(filename=*{rutaImagen})}" th:alt="*{nombre}">
                     <div class="card-body">
-                        <h5 th:text="*{productos.nombre}" class="card-title"></h5>
-                        <p th:text="*{productos.descripcion}" class="card-text"></p>
-                        <p th:text="*{productos.precio}" class="card-text"><strong></strong></p>
-                    </div>
-                </div>
-            </div>
-
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="../../../../../../../../../Downloads/Mostrador/ropa1.jpg" class="card-img-top" alt="Prenda 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Andres Cepeda.</h5>
-                        <p class="card-text">Cepeda para curar el corazón ❤️‍🩹</p>
-                        <p class="card-text"><strong>$100.000</strong></p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="../../../../../../../../../Downloads/Mostrador/ropa2.jpg" class="card-img-top" alt="Prenda 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Eladio Carrion.</h5>
-                        <p class="card-text">Caras vemos, corazones no sabemos 🪐 @eladiocarrion.</p>
-                        <p class="card-text"><strong>$100.000</strong></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="../../../../../../../../../Downloads/Mostrador/ropa3.jpg" class="card-img-top" alt="Prenda 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Morat.</h5>
-                        <p class="card-text">Ellos son nuestra curita y volverás a sentir mariposas🦋</p>
-                        <p class="card-text"><strong>$100.000</strong></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row mt-4">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="../../../../../../../../../Downloads/Mostrador/ropa4.jpg" class="card-img-top" alt="Prenda 4">
-                    <div class="card-body">
-                        <h5 class="card-title">Blessd.</h5>
-                        <p class="card-text">BLESSING ON BLESSING 🦋
-                            Desde medallo, el bebe de la city👶🏻</p>
-                        <p class="card-text"><strong>$100.000</strong></p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="../../../../../../../../../Downloads/Mostrador/ropa5.jpg" class="card-img-top" alt="Prenda 5">
-                    <div class="card-body">
-                        <h5 class="card-title">Toyota</h5>
-                        <p class="card-text">Recuerden que pueden pedirnos de su carro favorito a nuestro Dm🏎️.</p>
-                        <p class="card-text"><strong>$100.000</strong></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="../../../../../../../../../Downloads/Mostrador/ropa6.jpg" class="card-img-top" alt="Prenda 6">
-                    <div class="card-body">
-                        <h5 class="card-title">Porche</h5>
-                        <p class="card-text">Recuerden que pueden pedirnos de su carro favorito a nuestro Dm🏎️.</p>
-                        <p class="card-text"><strong>$100.000</strong></p>
+                        <h2 class="card-tittle fs-6" th:text="*{nombre}"></h2>
+                        <p class="card-text fs-6" th:text="*{descripcion}"></p>
+                        <p class="card-text fs-6" th:text="'$' + *{precio}"></p>
+                        <button class="btn btn-success">Comprar</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </main>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+<footer>
+    <h2 class="title">Contacto</h2>
+    <p>¿Tienes alguna consulta, sugerencia o simplemente deseas comunicarte con nosotros? En <strong>Issi.com</strong>
+        estamos aquí para ayudarte. Nuestro equipo de atención al cliente está disponible para resolver tus dudas sobre
+        productos, pedidos, envíos y más. Puedes contactarnos a través de +57 301 3728811 o llenando el formulario en
+        nuestra web. ¡Estamos a un mensaje de distancia para brindarte la mejor experiencia de compra!</p>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

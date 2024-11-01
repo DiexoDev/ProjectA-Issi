@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", serif !important;
     margin: 0;
     padding: 20px;
     background: url("/images/background_listaProductos.jpg") repeat-y;
@@ -84,7 +85,8 @@ button[type="submit"] {
 }
 
 button:hover {
-    background-color: #45a049; /* Verde más oscuro al pasar el mouse */
+    background-color: #730000; /* Verde más oscuro al pasar el mouse */
+    color: #cccccc;
 }
 
 table {

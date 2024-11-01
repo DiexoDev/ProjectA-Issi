@@ -44,7 +44,8 @@
         <tr th:each="producto : ${productos}" th:object="${producto}">
             <td style="width: 150px; height: 100px;">
                 <a th:href="@{/assets/{filename}(filename=*{rutaImagen})}" data-fancybox>
-                    <img th:src="@{/assets/{filename}(filename=*{rutaImagen})}" alt="" class="img-thumbnail w-100 h-100"/>
+                    <img th:src="@{/assets/{filename}(filename=*{rutaImagen})}" alt=""
+                         class="img-thumbnail w-100 h-100"/>
                 </a>
             </td>
             <td th:text="${producto.id}"></td>
@@ -53,8 +54,17 @@
             <td th:text="${producto.precio}"></td>
             <td th:text="${producto.categoria}"></td>
             <td>
-                <button class="edit">Editar</button>
-                <button class="delete">Eliminar</button>
+                <button class="edit">
+                    <a th:href="@{admin/producto/editar/{id}(id=${producto.id})}">
+                        Editar
+                    </a>
+                </button>
+                <button class="delete">
+                    <a th:href="@{/admin/producto/eliminar/{id}(id=${producto.id})}">
+                        Eliminar
+                    </a>
+                </button>
+
             </td>
         </tr>
         </tbody>

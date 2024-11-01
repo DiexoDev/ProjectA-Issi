@@ -18,12 +18,12 @@ public class ProductoServiceImpl implements ProductoService {
     }
 
     @Override
-    public Producto guardarUsuario(Producto producto) {
+    public Producto guardarProducto(Producto producto) {
         return repository.save(producto);
     }
 
     @Override
-    public Producto actualizarUsuario(Producto producto) {
+    public Producto actualizarProducto(Producto producto) {
         return repository.save(producto);
     }
 
@@ -33,7 +33,7 @@ public class ProductoServiceImpl implements ProductoService {
     }
 
     @Override
-    public void eliminarUsuario(Long id) {
+    public void eliminarProducto(Long id) {
         repository.deleteById(id);
     }
 }

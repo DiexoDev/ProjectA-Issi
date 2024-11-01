@@ -3,6 +3,7 @@ package com.diegobpz.Issi.com.controller;
 import com.diegobpz.Issi.com.entity.Producto;
 import com.diegobpz.Issi.com.repository.ProductoRepository;
 import com.diegobpz.Issi.com.service.AssetsServiceImpl;
+import com.diegobpz.Issi.com.service.ProductoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -11,9 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
@@ -26,6 +25,8 @@ public class AdminController {
     private ProductoRepository repository;
     @Autowired
     private AssetsServiceImpl service;
+    @Autowired
+    private ProductoServiceImpl productoService;
 
     @GetMapping("")
     public ModelAndView verPaginaDeInicio(@PageableDefault(sort = "id") Pageable pageable) {
@@ -56,7 +57,41 @@ public class AdminController {
         return new ModelAndView("redirect:/admin");
     }
 
+    @GetMapping("/producto/editar/{id}")
+    public ModelAndView mostrarFormularioEditarProducto(@PathVariable Long id) {
+        Producto productoEncontrado = productoService.obtenerProductoPorId(id);
+        return new ModelAndView("admin/editar_producto").addObject("producto", productoEncontrado);
+    }
 
+    @PostMapping("/producto/editar/{id}")
+    public ModelAndView editarProducto(@PathVariable Long id, @Validated Producto producto, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return new ModelAndView("admin/editar_producto").addObject("producto", producto);
+        }
+        Producto productoGuardado = productoService.obtenerProductoPorId(id);
+        productoGuardado.setNombre(producto.getNombre());
+        productoGuardado.setDescripcion(producto.getDescripcion());
+        productoGuardado.setPrecio(producto.getPrecio());
+        productoGuardado.setStock(producto.getStock());
+        productoGuardado.setCategoria(producto.getCategoria());
+        productoGuardado.setTalla(producto.getTalla());
+
+        if (!producto.getImagen().isEmpty()) {
+            service.eliminarArchivo(productoGuardado.getRutaImagen());
+            String rutaImagen = service.guardarArchivo(producto.getImagen());
+            productoGuardado.setRutaImagen(rutaImagen);
+        }
+        productoService.guardarProducto(productoGuardado);
+        return new ModelAndView("redirect:/admin");
+    }
+
+    @GetMapping("/producto/eliminar/{id}")
+    public String eliminarProducto(@PathVariable Long id) {
+        Producto productoEncontrado = repository.findById(id).orElseThrow(() -> new IllegalArgumentException("ID de producto invalido: " + id));
+        service.eliminarArchivo(productoEncontrado.getRutaImagen());
+        productoService.eliminarProducto(id);
+        return "redirect:/admin";
+    }
 
 
 }
