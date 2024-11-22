@@ -7,6 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+
 @Controller
 public class ProductoController {
     @Autowired
@@ -17,4 +18,5 @@ public class ProductoController {
         model.addAttribute("productos", productoService.obtenerProductos());
         return new ModelAndView("catalogo").addObject("productos", productoService.obtenerProductos());
     }
+
 }

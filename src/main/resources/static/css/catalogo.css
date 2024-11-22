@@ -67,6 +67,180 @@ nav .nav-links{
     align-items: center;
     height: 75vh !important;
 }
+/*Carrito compras*/
+.icon-cart {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    stroke: black;
+}
+.icon-cart {
+    cursor: pointer;
+}
+
+.container-icon {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    display: flex;
+}
+
+.count-products {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.container-cart-products {
+    position: absolute;
+    left: 78.56%;
+    background-color: #fff;
+    width: 400px;
+    box-shadow: 0 10px 20px rgba(29, 10, 10, 0.2);
+    border-radius: 10px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.cart-total > h3{
+    margin-left: 35px;
+}
+.total-pagar{
+    color: #218838;
+
+}
+.cart-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.btn-pagar{
+    padding: 5px;
+    margin: 20px;
+}
+.btn-pagar a{
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.cart-total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    gap: 20px;
+    border-bottom: rgba(0, 0, 0, 0.2) solid 1px ;
+}
+
+.cart-total h3 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.total-pagar {
+    font-size: 20px;
+    font-weight: 900;
+}
+.hidden-cart {
+    display: none;
+}
+.info-cart-product {
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+}
+
+.titulo-producto-carrito {
+    font-size: 20px;
+}
+
+.precio-producto-carrito {
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.cantidad-producto-carrito {
+    font-weight: 400;
+    font-size: 20px;
+}
+/*Resumen del pedido*/
+#resumenPedido {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /*overflow-y: scroll;*/
+}
+#resumenPedido h2{
+    color: black;
+    padding: 10px;
+}
+#success-alert {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    display: none;
+
+}
+.order-summary, .payment-form {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.product {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.total {
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: right;
+}
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: #2980b9;
+}
+.payment-form {
+    display: none;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+/*Contenido de la pagina*/
 .header{
     background: url(/images/imagen_oscura.jpg) no-repeat center;
     background-size: cover;
@@ -82,7 +256,9 @@ nav .nav-links{
     flex-direction: column; 
     align-items: center; 
 }
-
+.card{
+    margin-bottom: 20px;
+}
 .title {
     margin-bottom: 40px;
     font-size: 60px;
@@ -142,5 +318,19 @@ footer p{
     }
     nav .nav-links{
         margin-left: 20%;
+    }
+    .title.footer{
+        padding: 0px;
+        margin: 0px;
+    }
+    .container-cart-products {
+        position: absolute;
+        left: 68%;
+        width: 400px;
+        z-index: 1000;
+    }
+    footer p{
+        font-size: 12px;
+
     }
 }

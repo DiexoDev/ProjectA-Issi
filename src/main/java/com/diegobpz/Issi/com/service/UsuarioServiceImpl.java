@@ -38,20 +38,6 @@ public class UsuarioServiceImpl implements UsuarioService {
         return Optional.empty();
     }
 
-    /*@Override
-    public Optional<Usuario> encontrarPorEmail(String email) {
-        return repository.findByEmail(email);
-    }
-
-    public boolean verificarCredenciales(String email, String contrasena) {
-        Optional<Usuario> usuarioOptional = repository.findByEmail(email);
-        if (usuarioOptional.isPresent()){
-            Usuario usuario = usuarioOptional.get();
-            return usuario.getContrasena().equals(contrasena);
-        }
-        return false;
-    }*/
-
     @Override
     public void eliminarUsuario(Long id) {
         repository.deleteById(id);

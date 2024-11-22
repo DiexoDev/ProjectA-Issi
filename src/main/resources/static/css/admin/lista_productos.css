@@ -109,18 +109,25 @@ th {
     border-radius: 3rem;
     color: white;
 }
-
 .edit:hover {
     background-color: #45a049;
 }
-
+.edit a, .delete a {
+    text-decoration: none;
+    color: white;
+}
 .delete {
     background-color: #f44336; /* Rojo */
     border-radius: 3rem;
 }
+.delete:hover {
+    background-color: #da190b;
+}
+
 @media  (min-width: 368px) and (max-width: 1400px) {
     nav a{
         padding: 10px;
+        margin-left: 125px;
     }
 
 }

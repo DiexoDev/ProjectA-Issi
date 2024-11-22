@@ -172,6 +172,7 @@ p {
     padding-top: 20px;
     background: #171717;
     padding-bottom: 0;
+    height: 60vh;
 }
 .texto-dinamico {
     mix-blend-mode: difference;

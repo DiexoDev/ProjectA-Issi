@@ -19,11 +19,6 @@ public class UsuarioController {
     private UsuarioServiceImpl usuarioService;
 
 
-    @GetMapping("/index")
-    public String mostrarIndex() {
-        return "index";
-    }
-
     @GetMapping("/registro")
     public String mostrarRegistroForm(Model model) {
         Usuario usuario = new Usuario();
@@ -45,7 +40,7 @@ public class UsuarioController {
             String contrasenaUsuario = usuarioEncontrado.getContrasena();
             if (email.equalsIgnoreCase(emailUsuario) && contrasena.equalsIgnoreCase(contrasenaUsuario)){
                 session.setAttribute("usuario", usuarioEncontrado);
-                return "redirect:/api/index";
+                return "redirect:/catalogo";
             }
             else {
                 model.addAttribute("error", "Usuario o contraseña incorrectos");
@@ -55,7 +50,6 @@ public class UsuarioController {
             model.addAttribute("error", "Usuario no encontrado");
             return "redirect:/api/login";
         }
-
     }
 
     @GetMapping("/login")

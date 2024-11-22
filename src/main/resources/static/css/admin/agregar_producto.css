@@ -85,6 +85,7 @@ button:hover {
 @media  (min-width: 368px) and (max-width: 1400px) {
     nav a{
         padding: 10px;
+        margin-left: 125px;
     }
 
 }

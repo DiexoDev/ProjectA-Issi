@@ -5,11 +5,40 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3dc52cf-2f22-41ad-b88a-d682cc2e1c15" name="Changes" comment="version 1.2">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/images/icono-carrito.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/carrito.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/login-admin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diegobpz/Issi/com/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diegobpz/Issi/com/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diegobpz/Issi/com/controller/ProductoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diegobpz/Issi/com/controller/ProductoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diegobpz/Issi/com/controller/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diegobpz/Issi/com/controller/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diegobpz/Issi/com/entity/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diegobpz/Issi/com/entity/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diegobpz/Issi/com/repository/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diegobpz/Issi/com/repository/UsuarioRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/diegobpz/Issi/com/service/UsuarioServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/diegobpz/Issi/com/service/UsuarioServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/admin/agregar_producto.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/admin/agregar_producto.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/admin/lista_productos.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/admin/lista_productos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/catalogo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/catalogo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/agregar_producto.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/agregar_producto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/editar_producto.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/editar_producto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/lista_productos.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/lista_productos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/catalogo.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/catalogo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registro.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/diegobpz/Issi/com/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/diegobpz/Issi/com/controller/AdminController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/diegobpz/Issi/com/controller/ProductoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/diegobpz/Issi/com/controller/ProductoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/diegobpz/Issi/com/controller/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/diegobpz/Issi/com/controller/UsuarioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/admin/agregar_producto.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/admin/agregar_producto.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/admin/lista_productos.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/admin/lista_productos.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/catalogo.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/catalogo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/agregar_producto.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/agregar_producto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/editar_producto.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/editar_producto.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/lista_productos.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/lista_productos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/catalogo.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/catalogo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/registro.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/registro.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +50,9 @@
       <list>
         <option value="Interface" />
         <option value="Class" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -47,9 +78,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
+  &quot;history&quot;: [
+    {
+      &quot;state&quot;: &quot;OPEN&quot;
+    }
+  ],
   &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;DiexoDev&quot;
+    &quot;state&quot;: &quot;OPEN&quot;
   }
 }</component>
   <component name="GithubPullRequestsUISettings">{
@@ -87,7 +122,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;v1&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/RYZEN/Documents/UNIVERSIDAD/Programación/Maquetas Proyecto de aula IV SEM/Issi.com/src/main/resources/templates/admin&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/RYZEN/Documents/UNIVERSIDAD/Programación/Maquetas Proyecto de aula IV SEM/Issi.com/src/main/resources/static/css/plantilla-factura&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -99,18 +135,18 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\RYZEN\Documents\UNIVERSIDAD\Programación\Maquetas Proyecto de aula IV SEM\Issi.com\src\main\resources\templates\admin" />
-      <recent name="C:\Users\RYZEN\Documents\UNIVERSIDAD\Programación\Maquetas Proyecto de aula IV SEM\Issi.com\src\main\resources\static\css\admin" />
-      <recent name="C:\Users\RYZEN\Documents\UNIVERSIDAD\Programación\Maquetas Proyecto de aula IV SEM\Issi.com\src\main\resources\static\images\index" />
+      <recent name="C:\Users\RYZEN\Documents\UNIVERSIDAD\Programación\Maquetas Proyecto de aula IV SEM\Issi.com\src\main\resources\static\css\plantilla-factura" />
+      <recent name="C:\Users\RYZEN\Documents\UNIVERSIDAD\Programación\Maquetas Proyecto de aula IV SEM\Issi.com\src\main\resources\templates\plantilla-factura" />
+      <recent name="C:\Users\RYZEN\Documents\UNIVERSIDAD\Programación\Maquetas Proyecto de aula IV SEM\Issi.com\src\main\resources\static\js" />
       <recent name="C:\Users\RYZEN\Documents\UNIVERSIDAD\Programación\Maquetas Proyecto de aula IV SEM\Issi.com\src\main\resources\static\images" />
-      <recent name="C:\Users\RYZEN\Documents\UNIVERSIDAD\Programación\Maquetas Proyecto de aula IV SEM\Issi.com\src\main\resources\static\css" />
+      <recent name="C:\Users\RYZEN\Documents\UNIVERSIDAD\Programación\Maquetas Proyecto de aula IV SEM\Issi.com\src\main\resources\templates\admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\RYZEN\Documents\UNIVERSIDAD\Programación\Maquetas Proyecto de aula IV SEM\Issi.com\src\main\resources\static" />
+      <recent name="C:\Users\RYZEN\Documents\UNIVERSIDAD\Programación\Maquetas Proyecto de aula IV SEM\Issi.com\src\main\resources" />
       <recent name="C:\Users\RYZEN\Documents\UNIVERSIDAD\Programación\Maquetas Proyecto de aula IV SEM\Issi.com\src\main\resources\static\images" />
       <recent name="C:\Users\RYZEN\Documents\UNIVERSIDAD\Programación\Maquetas Proyecto de aula IV SEM\Issi.com\src\main\resources\templates" />
       <recent name="C:\Users\RYZEN\Documents\UNIVERSIDAD\Programación\Maquetas Proyecto de aula IV SEM\Issi.com\src\main\resources\templates\admin" />
-      <recent name="C:\Users\RYZEN\Documents\UNIVERSIDAD\Programación\Maquetas Proyecto de aula IV SEM\Issi.com\src\main\resources\static\css" />
-      <recent name="C:\Users\RYZEN\Documents\UNIVERSIDAD\Programación\Maquetas Proyecto de aula IV SEM\Issi.com\src\main\resources\static" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.diegobpz.Issi.com.service" />
@@ -187,7 +223,21 @@
       <workItem from="1730149390559" duration="8871000" />
       <workItem from="1730392663246" duration="3914000" />
       <workItem from="1730414686944" duration="5663000" />
-      <workItem from="1730420575895" duration="3585000" />
+      <workItem from="1730420575895" duration="3833000" />
+      <workItem from="1730424478103" duration="1065000" />
+      <workItem from="1730916507638" duration="4016000" />
+      <workItem from="1730931603016" duration="9006000" />
+      <workItem from="1731020554554" duration="55000" />
+      <workItem from="1731021167381" duration="3684000" />
+      <workItem from="1731099723352" duration="714000" />
+      <workItem from="1731107502035" duration="4312000" />
+      <workItem from="1731353195420" duration="5458000" />
+      <workItem from="1731359201933" duration="11289000" />
+      <workItem from="1731883823834" duration="986000" />
+      <workItem from="1732068810041" duration="1762000" />
+      <workItem from="1732210558296" duration="3301000" />
+      <workItem from="1732219930259" duration="1531000" />
+      <workItem from="1732240447516" duration="2993000" />
     </task>
     <task id="LOCAL-00001" summary="V1">
       <option name="closed" value="true" />
@@ -237,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730423115655</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="version 1.2">
+      <option name="closed" value="true" />
+      <created>1730424174956</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1730424174956</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
